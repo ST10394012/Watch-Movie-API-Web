@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|c:\\users\\lab_services_student\\source\\repos\\movie_api_web\\movie_api_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|solutionrelative:movie_api_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|c:\\users\\lab_services_student\\source\\repos\\movie_api_web\\movie_api_web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|solutionrelative:movie_api_web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -55,19 +59,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Program.cs",
+              "RelativeDocumentMoniker": "Movie_API_Web\\Program.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Program.cs",
+              "RelativeToolTip": "Movie_API_Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T22:40:04.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Movie_API_Web\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Movie_API_Web\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAACAAAAAAAARwAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-02-21T22:19:35.172Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Movie_API_Web\\Views\\Home\\Index.cshtml",
@@ -75,12 +92,11 @@
               "RelativeToolTip": "Movie_API_Web\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-21T22:18:17.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T22:18:17.095Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Movie_API_Web\\Controllers\\HomeController.cs",
@@ -92,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TmdbResponse.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Models\\TmdbResponse.cs",
               "RelativeDocumentMoniker": "Movie_API_Web\\Models\\TmdbResponse.cs",
@@ -104,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "comments.json",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Data\\comments.json",
               "RelativeDocumentMoniker": "Movie_API_Web\\Data\\comments.json",
@@ -116,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "TmdbService.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Services\\TmdbService.cs",
               "RelativeDocumentMoniker": "Movie_API_Web\\Services\\TmdbService.cs",
@@ -128,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CommentService.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Services\\CommentService.cs",
               "RelativeDocumentMoniker": "Movie_API_Web\\Services\\CommentService.cs",
@@ -140,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MovieController.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Controllers\\MovieController.cs",
               "RelativeDocumentMoniker": "Movie_API_Web\\Controllers\\MovieController.cs",
@@ -148,12 +164,11 @@
               "RelativeToolTip": "Movie_API_Web\\Controllers\\MovieController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T22:36:28.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T22:36:28.358Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Views\\Movie\\Details.cshtml",
               "RelativeDocumentMoniker": "Movie_API_Web\\Views\\Movie\\Details.cshtml",
@@ -165,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Views\\Movie\\Index.cshtml",
               "RelativeDocumentMoniker": "Movie_API_Web\\Views\\Movie\\Index.cshtml",
