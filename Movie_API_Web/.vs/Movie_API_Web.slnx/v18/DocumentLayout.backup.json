@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|c:\\users\\lab_services_student\\source\\repos\\movie_api_web\\movie_api_web\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|solutionrelative:movie_api_web\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|c:\\users\\lab_services_student\\source\\repos\\movie_api_web\\movie_api_web\\services\\tmdbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|solutionrelative:movie_api_web\\services\\tmdbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|c:\\users\\lab_services_student\\source\\repos\\movie_api_web\\movie_api_web\\models\\tmdbresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|solutionrelative:movie_api_web\\models\\tmdbresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|c:\\users\\lab_services_student\\source\\repos\\movie_api_web\\movie_api_web\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|solutionrelative:movie_api_web\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7634C39-4F38-3FC3-A9AB-0BBB63923228}|Movie_API_Web\\Movie_API_Web.csproj|c:\\users\\lab_services_student\\source\\repos\\movie_api_web\\movie_api_web\\data\\comments.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TmdbResponse.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Models\\TmdbResponse.cs",
               "RelativeDocumentMoniker": "Movie_API_Web\\Models\\TmdbResponse.cs",
@@ -62,8 +62,7 @@
               "RelativeToolTip": "Movie_API_Web\\Models\\TmdbResponse.cs",
               "ViewState": "AgIAADAAAACQzMzMzIwwwA8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T22:39:32.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-20T22:39:32.106Z"
             },
             {
               "$type": "Document",
@@ -79,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TmdbService.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Services\\TmdbService.cs",
               "RelativeDocumentMoniker": "Movie_API_Web\\Services\\TmdbService.cs",
@@ -92,15 +91,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "CommentService.cs",
               "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Services\\CommentService.cs",
               "RelativeDocumentMoniker": "Movie_API_Web\\Services\\CommentService.cs",
               "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\Movie_API_Web\\Movie_API_Web\\Services\\CommentService.cs",
               "RelativeToolTip": "Movie_API_Web\\Services\\CommentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAACA08zMzMwMwAwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T22:49:39.016Z"
+              "WhenOpened": "2026-02-20T22:49:39.016Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
