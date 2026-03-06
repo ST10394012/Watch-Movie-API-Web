@@ -1,5 +1,189 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Movie Details - MovieSite";
 }
+
+<div class="container">
+    <div class="row">
+        <!-- Movie Information Column -->
+        <div class="col-lg-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <!-- Movie Header -->
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <!-- Movie Poster -->
+                            <img src="@(ViewBag.ImageBaseUrl)/movie-placeholder.jpg"
+                                 class="img-fluid rounded"
+                                 alt="Movie Poster"
+                                 style="width: 100%; max-width: 300px;" />
+                        </div>
+                        <div class="col-md-8">
+                            <!-- Movie Title and Details -->
+                            <h1 class="card-title">Movie Details</h1>
+                            <p class="lead">Year: <span class="badge bg-secondary">2024</span></p>
+
+                            <div class="mb-3">
+                                <h4>Rating</h4>
+                                <div class="alert alert-warning">
+                                    ⭐ 8.5 / 10 (Based on 5000 votes)
+                                </div>
+                            </div>
+
+                            <p class="text-muted">
+                                <strong>Language:</strong> English | <strong>Popularity:</strong> 85
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Synopsis -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary">
+                    <h5 class="mb-0">Synopsis</h5>
+                </div>
+                <div class="card-body">
+                    <p>
+                        This is the movie synopsis and overview. It provides a detailed description
+                        of what the movie is about. This information would be fetched from the
+                        TMDb API in a production environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <!-- Quick Info Card -->
+            <div class="card mb-4">
+                <div class="card-header bg-info">
+                    <h5 class="mb-0">Movie Info</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Release Date:</strong> January 1, 2024</p>
+                    <p><strong>Vote Count:</strong> 5000</p>
+                    <p><strong>Popularity Score:</strong> 85.5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="row mt-5">
+        <div class="col-lg-8">
+            <h2 class="mb-4">Audience Comments & Discussion</h2>
+
+            <!-- Add Comment Form -->
+            <div class="card mb-4">
+                <div class="card-header bg-success">
+                    <h5 class="mb-0">Leave a Comment</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="@Url.Action("AddComment", "Movie")">
+                        <input type="hidden" name="movieId" value="@ViewBag.MovieId" />
+
+                        <div class="mb-3">
+                            <label for="author" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="author" name="author"
+                                   placeholder="Enter your name" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                   placeholder="Enter your email" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Comment</label>
+                            <textarea class="form-control" id="message" name="message" rows="4"
+                                      placeholder="Share your thoughts about this movie..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Post Comment</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Existing Comments -->
+            @if (ViewBag.Comments != null && ViewBag.Comments.Count > 0)
+            {
+                <div class="comments-section">
+                    <h4>Comments (@ViewBag.Comments.Count)</h4>
+
+                    @foreach (var comment in ViewBag.Comments)
+                    {
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <!-- Comment Header -->
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h6 class="card-subtitle fw-bold">@comment.Author</h6>
+                                        <small class="text-muted">
+                                            @comment.CreatedAt.ToString("MMMM dd, yyyy 'at' h:mm tt")
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <!-- Comment Content -->
+                                <p class="card-text">@comment.Message</p>
+
+                                <!-- Reply Button -->
+                                <button class="btn btn-sm btn-outline-primary"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#reply-form-@comment.Id">
+                                    Reply
+                                </button>
+
+                                <!-- Reply Form (Collapsed) -->
+                                <div class="collapse mt-3" id="reply-form-@comment.Id">
+                                    <form method="post" action="@Url.Action("AddReply", "Movie")" class="border-left ps-3 mt-2">
+                                        <input type="hidden" name="movieId" value="@ViewBag.MovieId" />
+                                        <input type="hidden" name="commentId" value="@comment.Id" />
+
+                                        <div class="mb-2">
+                                            <input type="text" class="form-control form-control-sm" name="author"
+                                                   placeholder="Your name" required />
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <textarea class="form-control form-control-sm" name="message" rows="2"
+                                              placeholder="Write a reply..." required></textarea>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-sm btn-primary">Post Reply</button>
+                                    </form>
+                                </div>
+
+                                <!-- Replies Section -->
+                                @if (comment.Replies != null && comment.Replies.Count > 0)
+                                {
+                                    <div class="ms-4 mt-3">
+                                        @foreach (var reply in comment.Replies)
+                                        {
+                                            <div class="card bg-light mb-2">
+                                                <div class="card-body p-2">
+                                                    <h6 class="card-subtitle fw-bold">@reply.Author</h6>
+                                                    <small class="text-muted">
+                                                        @reply.CreatedAt.ToString("MMMM dd, yyyy 'at' h:mm tt")
+                                                    </small>
+                                                    <p class="card-text mt-1 mb-0">@reply.Message</p>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    No comments yet. Be the first to share your thoughts!
+                </div>
+            }
+        </div>
+    </div>
+</div>
