@@ -1,5 +1,163 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<Movie_API_Web.Models.Movie>
+
 @{
+    ViewData["Title"] = "Movies - MovieSite";
 }
+
+<div class="container">
+    <!-- Search and Filter Bar -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <form method="get" class="input-group">
+                <input type="text" name="searchQuery" class="form-control"
+                       placeholder="Search for a movie..."
+                       value="@ViewBag.SearchQuery" />
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="col-md-4">
+            <div class="btn-group" role="group">
+                <a href="@Url.Action("Index", "Movie", new { category = "popular" })"
+                   class="btn btn-outline-secondary @(ViewBag.Category == "popular" || string.IsNullOrEmpty(ViewBag.Category) ? "active" : "")">
+                    Popular
+                </a>
+                <a href="@Url.Action("Index", "Movie", new { category = "upcoming" })"
+                   class="btn btn-outline-secondary @(ViewBag.Category == "upcoming" ? "active" : "")">
+                    Upcoming
+                </a>
+                <a href="@Url.Action("Index", "Movie", new { category = "nowplaying" })"
+                   class="btn btn-outline-secondary @(ViewBag.Category == "nowplaying" ? "active" : "")">
+                    Now Playing
+                </a>
+            </div>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(ViewBag.Error))
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+
+    <!-- Movies Grid -->
+    <div class="row">
+        @if (Model != null && Model.Count > 0)
+        {
+            @foreach (var movie in Model)
+            {
+                <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                    <div class="card h-100 movie-card shadow-sm">
+                        <!-- Movie Poster Image -->
+                        @if (!string.IsNullOrEmpty(movie.PosterPath))
+                        {
+                            <img src="@(ViewBag.ImageBaseUrl)@movie.PosterPath"
+                                 class="card-img-top" alt="@movie.Title" style="height: 300px; object-fit: cover;" />
+                        }
+                        else
+                        {
+                            <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center"
+                                 style="height: 300px;">
+                                <span class="text-white">No Image</span>
+                            </div>
+                        }
+
+                        <div class="card-body d-flex flex-column">
+                            <!-- Movie Title -->
+                            <h5 class="card-title">@movie.Title</h5>
+
+                            <!-- Release Year -->
+                            @if (!string.IsNullOrEmpty(movie.ReleaseDate))
+                            {
+                                <p class="card-text text-muted small">
+                                    @DateTime.Parse(movie.ReleaseDate).Year
+                                </p>
+                            }
+
+                            <!-- Rating Badge -->
+                            <div class="mb-2">
+                                <span class="badge bg-warning text-dark">⭐ @movie.VoteAverage.ToString("F1")/10</span>
+                                <span class="badge bg-info">@movie.VoteCount votes</span>
+                            </div>
+
+                            <!-- Overview/Description (truncated) -->
+                            @if (!string.IsNullOrEmpty(movie.Overview))
+                            {
+                                <p class="card-text small flex-grow-1">
+                                    @{
+                                        string overview = movie.Overview.Length > 100
+                                        ? movie.Overview.Substring(0, 100) + "..."
+                                                                                : movie.Overview;
+                                    }
+                                    @overview
+                                </p>
+                            }
+
+                            <!-- View Details Button -->
+                            <a href="@Url.Action("Details", "Movie", new { id = movie.Id })"
+                               class="btn btn-primary mt-auto">
+                                View Details & Comments
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-12">
+                <div class="alert alert-info">No movies found. Try a different search or category.</div>
+            </div>
+        }
+    </div>
+
+    <!-- Pagination -->
+    @if (ViewBag.TotalPages > 1)
+    {
+        <nav aria-label="Page navigation" class="mt-5">
+            <ul class="pagination justify-content-center">
+                <!-- Previous Button -->
+                @if (ViewBag.CurrentPage > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", "Movie",
+                                                                        new { category = ViewBag.Category, searchQuery = ViewBag.SearchQuery, page = ViewBag.CurrentPage - 1 })">
+                    Previous
+                </a>
+            </li>
+                        }
+
+                <!-- Page Numbers (show 5 pages total) -->
+                @{
+                    int startPage = Math.Max(1, ViewBag.CurrentPage - 2);
+                    int endPage = Math.Min(ViewBag.TotalPages, startPage + 4);
+                    if (endPage - startPage < 4)
+                    {
+                        startPage = Math.Max(1, endPage - 4);
+                    }
+                }
+
+                @for (int i = startPage; i <= endPage; i++)
+                {
+                    <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Index", "Movie",
+                                                                        new { category = ViewBag.Category, searchQuery = ViewBag.SearchQuery, page = i })">
+                    @i
+                </a>
+            </li>
+                        }
+
+                <!-- Next Button -->
+                @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", "Movie",
+                                                                        new { category = ViewBag.Category, searchQuery = ViewBag.SearchQuery, page = ViewBag.CurrentPage + 1 })">
+                    Next
+                </a>
+            </li>
+                        }
+            </ul>
+        </nav>
+    }
+</div>
