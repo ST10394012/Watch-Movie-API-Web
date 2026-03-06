@@ -2,13 +2,12 @@
     ViewData["Title"] = "Home - MovieSite";
 }
 
-<!-- Hero Section -->
-<section class="hero-section mb-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('https://image.tmdb.org/t/p/original@((ViewBag.FeaturedMovies?.Count > 0)
-                                       ? ViewBag.FeaturedMovies[0]?.BackdropPath : "/placeholder.jpg")');
-    background-size: cover; background-position: center; min-height: 500px;
+<!-- Hero Section - FIXED VERSION -->
+<section class="hero-section mb-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url('https://image.tmdb.org/t/p/original@(ViewBag.FeaturedMovies != null && ViewBag.FeaturedMovies.Count > 0 && !string.IsNullOrEmpty(ViewBag.FeaturedMovies[0]?.BackdropPath) ? ViewBag.FeaturedMovies[0].BackdropPath : "")'); 
+    background-size: cover; background-position: center; min-height: 500px; 
     display: flex; align-items: center; justify-content: center; color: white; text-align: center;">
-
+    
     <div class="container">
         <h1 class="display-3 fw-bold mb-3">Welcome to MovieSite</h1>
         <p class="lead mb-4">Discover, explore, and discuss your favorite movies and TV shows</p>
@@ -18,7 +17,7 @@
     </div>
 </section>
 
-<!-- Featured Movies Section -->
+<!-- Featured Movies Section - FIXED VERSION -->
 <section class="featured-movies mb-5">
     <div class="container">
         <h2 class="mb-4">Featured Movies</h2>
@@ -31,15 +30,22 @@
                         <div class="card h-100 movie-card hover-effect">
                             @if (!string.IsNullOrEmpty(movie.PosterPath))
                             {
-                                <img src="https://image.tmdb.org/t/p/w500@movie.PosterPath"
+                                <!-- FIXED: Proper @ escaping for Razor -->
+                                <img src="https://image.tmdb.org/t/p/w500@(movie.PosterPath)" 
                                      class="card-img-top" alt="@movie.Title" />
+                            }
+                            else
+                            {
+                                <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center" style="height: 300px;">
+                                    <span class="text-white">No Image</span>
+                                </div>
                             }
                             <div class="card-body">
                                 <h6 class="card-title">@movie.Title</h6>
                                 <p class="card-text small">
-                                    <span class="badge bg-warning">⭐ @movie.VoteAverage</span>
+                                    <span class="badge bg-warning">⭐ @movie.VoteAverage.ToString("F1")</span>
                                 </p>
-                                <a href="@Url.Action("Details", "Movie", new { id = movie.Id })"
+                                <a href="@Url.Action("Details", "Movie", new { id = movie.Id })" 
                                    class="btn btn-sm btn-primary w-100">
                                     View Details
                                 </a>
@@ -52,7 +58,7 @@
     </div>
 </section>
 
-<!-- Upcoming Movies Section -->
+<!-- Upcoming Movies Section - FIXED VERSION -->
 <section class="upcoming-movies">
     <div class="container">
         <h2 class="mb-4">Coming Soon</h2>
@@ -65,18 +71,25 @@
                         <div class="card h-100 movie-card hover-effect">
                             @if (!string.IsNullOrEmpty(movie.PosterPath))
                             {
-                                <img src="https://image.tmdb.org/t/p/w500@movie.PosterPath"
+                                <!-- FIXED: Proper image URL construction -->
+                                <img src="https://image.tmdb.org/t/p/w500@(movie.PosterPath)" 
                                      class="card-img-top" alt="@movie.Title" />
+                            }
+                            else
+                            {
+                                <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center" style="height: 300px;">
+                                    <span class="text-white">No Image</span>
+                                </div>
                             }
                             <div class="card-body">
                                 <h6 class="card-title">@movie.Title</h6>
-                                <p class="card-text small text-muted">
-                                    @if (!string.IsNullOrEmpty(movie.ReleaseDate))
-                                    {
+                                @if (!string.IsNullOrEmpty(movie.ReleaseDate))
+                                {
+                                    <p class="card-text small text-muted">
                                         <span>@DateTime.Parse(movie.ReleaseDate).ToString("MMM dd, yyyy")</span>
-                                    }
-                                </p>
-                                <a href="@Url.Action("Details", "Movie", new { id = movie.Id })"
+                                    </p>
+                                }
+                                <a href="@Url.Action("Details", "Movie", new { id = movie.Id })" 
                                    class="btn btn-sm btn-primary w-100">
                                     View Details
                                 </a>
