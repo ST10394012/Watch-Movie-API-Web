@@ -24,9 +24,7 @@ C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\scopedcss\bundle\Movie_API_Web.styles.css
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\scopedcss\projectbundle\Movie_API_Web.bundle.scp.css
-C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\compressed\bse1zz78q7-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\compressed\6ideqt0era-{0}-61n19gt1b8-61n19gt1b8.gz
-C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\compressed\myqgkqacoz-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\compressed\3r61kv0vb9-{0}-bqjiyaj88i-bqjiyaj88i.gz
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\compressed\luuf731cbz-{0}-c2jlpeoesf-c2jlpeoesf.gz
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\compressed\5dy6gm5g11-{0}-erw9l3u2r3-erw9l3u2r3.gz
@@ -100,3 +98,6 @@ C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\Movie_API_Web.pdb
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\Movie_API_Web.genruntimeconfig.cache
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\ref\Movie_API_Web.dll
+C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\Movie_API_Web.sourcelink.json
+C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\compressed\d3o14rnewc-{0}-117qzd9eiu-117qzd9eiu.gz
+C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\obj\Debug\net10.0\compressed\qlm946id68-{0}-522nf69niq-522nf69niq.gz

@@ -1,6 +1,6 @@
-wwwroot\css\site.css
+wwwroot\css\custom.css
 wwwroot\favicon.ico
-wwwroot\js\site.js
+wwwroot\js\filter.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -61,9 +61,7 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\wwwroot\css\site.css
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\wwwroot\favicon.ico
-C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\wwwroot\js\site.js
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -123,3 +121,5 @@ C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\wwwroot\l
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\wwwroot\css\custom.css
+C:\Users\lab_services_student\source\repos\Movie_API_Web\Movie_API_Web\wwwroot\js\filter.js

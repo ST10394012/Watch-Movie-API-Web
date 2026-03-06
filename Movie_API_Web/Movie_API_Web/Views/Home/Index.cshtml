@@ -30,7 +30,7 @@
                         <div class="card h-100 movie-card hover-effect">
                             @if (!string.IsNullOrEmpty(movie.PosterPath))
                             {
-                                <!-- FIXED: Proper @ escaping for Razor -->
+                                
                                 <img src="https://image.tmdb.org/t/p/w500@(movie.PosterPath)" 
                                      class="card-img-top" alt="@movie.Title" />
                             }

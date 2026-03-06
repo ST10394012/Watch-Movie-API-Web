@@ -1,3 +1,19 @@
-{
-
-}
+[
+  {
+    "id": "comment-1",
+    "movieId": 550,
+    "author": "John Doe",
+    "email": "john@example.com",
+    "message": "This movie was absolutely amazing! The plot twist at the end blew my mind.",
+    "createdAt": "2025-01-15T10:30:00Z",
+    "replies": [
+      {
+        "id": "reply-1",
+        "author": "Jane Smith",
+        "email": "jane@example.com",
+        "message": "I totally agree! One of the best films I've seen.",
+        "createdAt": "2025-01-15T11:45:00Z"
+      }
+    ]
+  }
+]

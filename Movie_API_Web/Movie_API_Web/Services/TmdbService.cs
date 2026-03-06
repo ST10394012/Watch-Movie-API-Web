@@ -18,7 +18,7 @@ namespace Movie_API_Web.Services
         {
             _httpClient = httpClient;
             
-            _apiKey = configuration["TmdbSettings:ApiKey"] ?? "YOUR_TMDB_API_KEY_HERE";
+            _apiKey = configuration["TmdbSettings:ApiKey"] ?? "afa19e604285eea225e5a39bd5d39978";
         }
 
         

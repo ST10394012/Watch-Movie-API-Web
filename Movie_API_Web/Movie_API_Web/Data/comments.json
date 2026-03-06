@@ -1,3 +1,28 @@
-{
-
-}
+[
+  {
+    "Id": "4306a99e-fa36-4594-b691-089a9ea3a27d",
+    "MovieId": 0,
+    "Author": null,
+    "Email": null,
+    "Message": null,
+    "CreatedAt": "2026-03-06T22:59:14.2497466Z",
+    "Replies": []
+  },
+  {
+    "Id": "708d5307-0217-4a3b-a513-8a81de0963b1",
+    "MovieId": 1389149,
+    "Author": "Sontaga",
+    "Email": "zondag2k3@gmail.com",
+    "Message": "boring movie, they could\u0027ve done better\r\n",
+    "CreatedAt": "2026-03-06T22:59:14.2498519Z",
+    "Replies": [
+      {
+        "Id": "9c0f7be1-fe53-4634-a008-5ecf9827d3d4",
+        "Author": "kabelo",
+        "Email": "noemail@example.com",
+        "Message": "go an watch cartoons chief",
+        "CreatedAt": "2026-03-06T23:00:04.8773805Z"
+      }
+    ]
+  }
+]
